@@ -1,0 +1,129 @@
+***************************************************************
+
+          SpaceDynX (pre-release version, Oct. 1999)
+
+***************************************************************
+SpaceDynX has been cloned from SpaceDyn, a MATLAB toolbox for 
+space and mobile robots developed at the Space Robotics Lab 
+(Dr. Kazuya Yoshida), Tohoku University. 
+
+SpaceDynX is a set of functions compatible with the MaTX multi-
+platform package for math calculations, developed by Dr. Masanabu 
+Koga, Tokyo Institute of Technology.
+
+SpaceDynX is independent of MATLAB.
+
+***************************************************************
+Free downloads: 
+
+   SpaceDyn:  http://www.astro.mech.tohoku.ac.jp/home-e.html
+   MaTX:      http://matx.ds.mei.titech.ac.jp/
+   SpaceDynX: http://www.astro.mech.tohoku.ac.jp/home-e.html
+
+***************************************************************
+This pre-release version of SpaceDynX covers most of the 
+functions of SpaceDyn v.1. A reference table is available in 
+the appendix of this document.
+
+So far, SpaceDynX has been tested with three models:
+
+   1: ETS-7, a free-floating space robot
+   2: A planar 3 DOF free-floating robot impacting with a rotating 
+      object
+   3: A 7 DOF model of the SSRMS manipulator 
+
+***************************************************************
+Reference:
+
+   The main reference is the SpaceDyn manual. 
+   There is no special manual for SpaceDynX.
+
+Differences between  SpaceDyn and SpaceDynX:  
+
+   The main difference between SpaceDyn and SpaceDynX is that the 
+   former uses 3 dimensional arrays, whereas the latter does not. 
+   This is mainly related to the description of the link centroid 
+   position vectors cc. Users should consult the examples.
+
+   Another difference is in the input variables of some of the 
+   functions.  
+
+***************************************************************
+Contact and bug reports:
+
+	nenchev@cc.hirosaki-u.ac.jp
+
+ 	Dragomir N. Nenchev
+	Department of Intelligent Machines and System Engineering
+	Hirosaki University
+	3 Bunkyo-cho, Hirosaki, Aomori Prefecture
+	036-8561 JAPAN
+	phone & fax +81-172-39-3678
+
+***************************************************************
+Contributors:
+
+    	Dragomir N. Nenchev
+	Hideyuki Nomura
+	Kenji Takasawa 
+
+***************************************************************
+     Appendix - Functions available in SpaceDyn v.1 and 
+                SpaceDynX pre-release
+***************************************************************
+SpaceDyn      	SpaceDynX	dependencies
+_______________________________________________________________
+aw.m		-
+calc_aa.m	calc_aa.mm  	rpy2dc		
+calc_acc.m	calc_acc.mm 	calc_aa, calc_vel, cross
+calc_gj.m	calc_gj.mm 	calc_hh, calc_jte, calc_jre,  
+                                f_kin_e, j_num, tilde
+calc_hh.m	calc_hh.mm  	calc_aa, calc_pos, calc_jr, 
+                                calc_jt, tilde
+calc_je.m	calc_je.mm 	calc_jte, calc_jre, j_num
+calc_jr.m	calc_jr.mm 	calc_aa
+calc_jre.m	calc_jre.mm   	calc_aa, j_num
+calc_jt.m	calc_jt.mm	calc_aa, calc_pos, cross
+calc_jte.m	calc_jte.mm	calc_aa, calc_pos, j_num, f_kin_j, 
+                                f_kin_e
+calc_pos.m	calc_pos.mm	calc_aa
+calc_vel.m	calc_vel.mm	calc_aa, cross
+cross.m		cross.mm	none
+cx.m		cx.mm   	none
+cy.m		cy.mm   	none
+cz.m		cz.mm   	none
+dc2eul.m	dc2eul.mm 	none
+dc2rpy.m	dc2rpy.mm 	none
+eul2dc.m	eul2dc.mm 	cx, cz
+f_dyn.m		-
+f_dyn_nb.m 	-
+f_dyn_nb2.m	-
+f_dyn_rk.m	-
+f_dyn_rk2.m	-
+f_kin_e.m	f_kin_e.mm	calc_aa, calc_pos, rpy2dc, j_num
+f_kin_j.m	f_kin_j.mm	calc_aa, calc_pos, j_num
+i_kine.m	-
+int_eu.m	int_eu.mm	tilde
+int_eu2.m	-
+j_num.m		j_num.mm	none
+r_ne.m		r_ne.m		calc_aa, calc_vel, calc_acc, cross
+rpy2dc.m	rpy2dc.mm 	cx. cy, cz
+test.m		example.mm
+tilde.m		tilde.mm	none
+tr2diff.m	tr2diff.mm	cross
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
